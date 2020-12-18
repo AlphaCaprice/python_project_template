@@ -1,0 +1,39 @@
+name: Run tests on any Push event
+
+on:
+  push:
+    branches:
+      - '**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    #  DB Optional
+#    services:
+#      postgres:
+#        image: postgres:11
+#        env:
+#          POSTGRES_USER: admin
+#          POSTGRES_PASSWORD: password
+#          POSTGRES_DB: db_name
+#        ports: [ '5432:5432' ]
+#        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    # Install tox to run tests
+    - name: Install deps
+      run: pip install tox~=3.19.0
+
+    # Run tests with make command using tox
+    - name: Run tests
+      run: make test
