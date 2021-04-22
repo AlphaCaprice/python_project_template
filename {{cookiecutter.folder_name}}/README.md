@@ -1,7 +1,7 @@
 # Development
 
 ## Install dev requirements
-`pip install -r dev-requirements.pip`
+`pip install -r requirements-dev.txt`
 
 ## Run tests
 - `make test` run test
