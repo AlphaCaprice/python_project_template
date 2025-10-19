@@ -1,9 +1,8 @@
 # Template for Python project
 
-- pylama
+- poetry
+- direnv
 - pytest
-- pre-commit
-- github-integration
 
 # How to start
 
