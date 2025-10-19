@@ -1,5 +1,6 @@
 {
-    "folder_name": "my_module",
-    "module_name": "{{ cookiecutter.folder_name }}"
-
+    "project_name": "my_project",
+    "short_description": "my test project",
+    "name": "name",
+    "email": "email"
 }
