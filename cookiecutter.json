@@ -1,7 +1,7 @@
 {
-    "project_name": "my_project",
+    "project_name": "my-new-project",
     "module_name": "{{ cookiecutter.project_name|lower|replace('-', '_') }}",
-    "short_description": "my test project",
+    "short_description": "my new project",
     "name": "name",
     "email": "email"
 }

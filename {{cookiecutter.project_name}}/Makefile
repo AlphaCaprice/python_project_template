@@ -3,10 +3,10 @@
 all: ruff mypy test
 
 ruff:
-	poetry run ruff check src/fastapi_sandbox tests --fix
+	poetry run ruff check src/{{cookiecutter.module_name}} tests --fix
 
 mypy:
-	poetry run mypy src/fastapi_sandbox tests
+	poetry run mypy src/{{cookiecutter.module_name}}
 
 test:
-	poetry run pytest
+	poetry run pytest --cov=src/{{cookiecutter.module_name}} --cov-report=term-missing --cov-fail-under=95
