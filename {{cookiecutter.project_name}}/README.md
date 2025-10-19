@@ -1,12 +1,13 @@
 # Development
 
-## Install dev requirements
-`pip install -r requirements-dev.txt`
+## Allow direnv
+`direnv allow`
 
-## Run tests
-- `make test` run test
+## Install requirements
+`poetry install`
 
-## Install pre-commit
-- `pip install pre-commit`
-- add hooks `pre-commit install`
-- update to the latest versions `pre-commit autoupdate`
+## Run checks
+- `make ruff` run ruff linter with format
+- `make mypy` run mypy
+- `make test` run tests with coverage
+- `make all` run all of the above
