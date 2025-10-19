@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+description = "{{cookiecutter.short_description}}"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.13"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.14.0"
+mypy = "^1.18.0"
+pytest = "*"
+pytest-mock = "*"
+pytest-cov = "*"
